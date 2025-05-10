@@ -11,3 +11,7 @@ https://github.com/lukasloetkolben/OpenpilotHardware/tree/main/BlackPanda
 ## 硬件图
 
 ![](./pic/connect.png)
+
+## 软件
+
+https://github.com/MM-X/sunnypilot-pc/tree/master-rk3588
