@@ -34,3 +34,4 @@ https://github.com/MM-X/sunnypilot-pc/tree/master-rk3588
 * 优化了原op软件USB Cam的接入速度，默认使用MJPG，帧率足够大于20HZ
 * 修改了locationd，imu信息来自于can，因此较好的效果需要can有imu信息，（目前只用到yaw_rate）
 * 受限于rk3588GPU（ARM Mali-G610）的推理速度（50～60ms）；对模型推理等一些进程做了降频处理：20HZ -> 10HZ；综合USB摄像头获取图像的延迟，整体端到端（曝光->控制）的延迟会比C3略高，粗略估计大概高100～200ms，勉强可接受
+* 适配了部分BYD车型（来源yysnet）
