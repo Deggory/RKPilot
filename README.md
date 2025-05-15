@@ -5,9 +5,6 @@
 ![](./pic/comma-rk1.JPG)
 ![](./pic/comma-rk2.JPG)
 
-## Panda
-https://github.com/lukasloetkolben/OpenpilotHardware/tree/main/BlackPanda
-
 ## 硬件图
 
 ![](./pic/connect.png)
@@ -23,6 +20,9 @@ https://github.com/lukasloetkolben/OpenpilotHardware/tree/main/BlackPanda
 | Relay| common | 参考openpilot官方，保障安全的 |
 
 下面给个代码里适配了标定参数的摄像头（tb搜DF100,720p,2.8mm,无畸变,FOV90）；白天用尚可，晚上用会掉帧（<20FPS）；后期会考虑换MIPI摄像头
+
+### Panda
+https://github.com/lukasloetkolben/OpenpilotHardware/tree/main/BlackPanda
 
 ## 软件
 
