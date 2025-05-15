@@ -29,6 +29,7 @@ https://github.com/lukasloetkolben/OpenpilotHardware/tree/main/BlackPanda
 https://github.com/MM-X/sunnypilot-pc/tree/master-rk3588
 
 ### KeyPoints
+* 模型为v0.9.8版本，尽可能会持续更新。。。
 * 使用的rk3588的GPU，没有使用NPU，原因是模型是fp32的，转换成rknn后精度损失太多，并且不做量化推理速度无明显优势
 * 优化了原op软件USB Cam的接入速度，默认使用MJPG，帧率足够大于20HZ
 * 修改了locationd，imu信息来自于can，因此较好的效果需要can有imu信息，（目前只用到yaw_rate）
