@@ -35,3 +35,12 @@ https://github.com/MM-X/sunnypilot-pc/tree/master-rk3588
 * 修改了locationd，imu信息来自于can，因此较好的效果需要can有imu信息，（目前只用到yaw_rate）
 * 受限于rk3588GPU（ARM Mali-G610）的推理速度（50～60ms）；对模型推理等一些进程做了降频处理：20HZ -> 10HZ；综合USB摄像头获取图像的延迟，整体端到端（曝光->控制）的延迟会比C3略高，粗略估计大概高100～200ms，勉强可接受
 * 适配了部分BYD车型（来源yysnet）
+
+## MIPI摄像头
+参考[香橙派使用imx415](imx415/readme.md)
+
+[imx415camera的tb购买地址](https://e.tb.cn/h.havxPLnMzUsQrZe?tk=bmSMVqqFa78);选的FOV90的
+
+### KeyPoints
+* 摄像头需要做参数标定，我还没来得及标，不想标可以等一等
+* 需要指定`ROAD_CAM=11`
