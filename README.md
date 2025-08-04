@@ -1,6 +1,15 @@
 # RKPilot
-基于RK3588/香橙派的openpilot软硬件;[bilibili](https://www.bilibili.com/video/BV172VZz5EEA/?share_source=copy_web&vd_source=25cfc82384a4467c4092b69e7f853bfd)
+
+基于RK3588/香橙派的openpilot软硬件!
+
 ![](./pic/comma-rk.png)
+
+
+## Video
+* 【【硬核】用香橙派玩转openpilot (RKPilot)】 https://www.bilibili.com/video/BV1jhhLzKEm6/?share_source=copy_web
+
+
+* 【用香橙派给油车配备驾驶助手】 https://www.bilibili.com/video/BV172VZz5EEA/?share_source=copy_web
 
 ## 硬件图
 
@@ -10,13 +19,12 @@
 | 硬件 | 型号 | 备注 |
 | :-----------: | :-------------:| :-------------:|
 | OrangePi5 | 4G/8G版本 | [OrangePi5](http://www.orangepi.cn/html/hardWare/computerAndMicrocontrollers/details/Orange-Pi-5.html) |
-| USB Cam | 1920x1080/1280x720/20~60FPS/FOV80～90 | 需要标定内参 |
-| Dispaly| 800x400分辨率HDMI屏幕 | master-rk3588分支适配了这个分辨率 |
-| MPU6050| common | 目前没用，后面会写驱动接进来 |
+| UsbCam/IMX415 | 1920x1080/1280x720/20~60FPS/FOV80～90 | usb摄像头和imx415mipi摄像头均可；需要标定内参 |
+| Dispaly| 800x480分辨率HDMI屏幕 | master-rk3588分支适配了这个分辨率 |
+| MPU6050| common | 目前没用，后面可能会写驱动接进来 |
 | Panda| common | 参考openpilot官方，保障安全的 |
 | Relay| common | 参考openpilot官方，保障安全的 |
 
-下面给个代码里适配了标定参数的摄像头（tb搜DF100,720p,2.8mm,无畸变,FOV90）；白天用尚可，晚上用会掉帧（<20FPS）；后期会考虑换MIPI摄像头
 
 ### Panda
 https://github.com/lukasloetkolben/OpenpilotHardware/tree/main/BlackPanda
@@ -39,5 +47,5 @@ https://github.com/MM-X/sunnypilot-pc/tree/master-rk3588
 [imx415camera的tb购买地址](https://e.tb.cn/h.havxPLnMzUsQrZe?tk=bmSMVqqFa78);选的FOV90的
 
 ### KeyPoints
-* 摄像头需要做参数标定，我还没来得及标，不想标可以等一等
+* 摄像头需要做参数标定，代码里的摄像头的参数目前是这款IMX415的参数
 * 需要指定`ROAD_CAM=11`

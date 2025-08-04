@@ -1,8 +1,11 @@
+## 硬件安装
+![](pic/org-pi.jpg)
+
 ## 下载安装镜像（ubuntu2404）
 https://github.com/Joshua-Riek/ubuntu-rockchip
 
 点击下面链接直接下载香橙派5的
-https://objects.githubusercontent.com/github-production-release-asset-2e65be/587553349/1d0ff0ce-8f30-402e-8df2-3f92337786d9?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250525%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250525T164236Z&X-Amz-Expires=300&X-Amz-Signature=274ed7e630e3a075068cb260f54f846ca0de87f2597e8528d2494524aa51d05f&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3Dubuntu-24.04-preinstalled-desktop-arm64-orangepi-5.img.xz&response-content-type=application%2Foctet-stream
+[https://github.com/Joshua-Riek/ubuntu-rockchip/releases/download/v2.4.0/ubuntu-24.04-preinstalled-desktop-arm64-orangepi-5.img.xz](https://github.com/Joshua-Riek/ubuntu-rockchip/releases/download/v2.4.0/ubuntu-24.04-preinstalled-desktop-arm64-orangepi-5.img.xz)
 
 ## 以下在香橙派5ubuntu2404环境下操作
 
