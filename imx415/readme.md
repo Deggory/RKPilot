@@ -93,3 +93,6 @@ pip install opencv-python
 python3 demo.py
 ```
 ![](pic/demo.png)
+
+## 其他型号3588
+可以参考dts-original目录下的修改自行修改编译生成相应的dts文件

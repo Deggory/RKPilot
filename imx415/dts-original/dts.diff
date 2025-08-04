@@ -1,0 +1,472 @@
+diff --git a/arch/arm64/boot/dts/rockchip/overlay/Makefile b/arch/arm64/boot/dts/rockchip/overlay/Makefile
+index 31095455f..785fe2d38 100644
+--- a/arch/arm64/boot/dts/rockchip/overlay/Makefile
++++ b/arch/arm64/boot/dts/rockchip/overlay/Makefile
+@@ -29,6 +29,9 @@ dtbo-$(CONFIG_ARCH_ROCKCHIP) += \
+ 	orangepi-5-imx219-c1.dtbo \
+ 	orangepi-5-imx219-c2.dtbo \
+ 	orangepi-5-imx219-c3.dtbo \
++	orangepi-5-imx415-c1.dtbo \
++	orangepi-5-imx415-c2.dtbo \
++	orangepi-5-imx415-c3.dtbo \
+ 	orangepi-5-imx708-c1.dtbo \
+ 	orangepi-5-imx708-c2.dtbo \
+ 	orangepi-5-imx708-c3.dtbo \
+diff --git a/arch/arm64/boot/dts/rockchip/overlay/orangepi-5-imx415-c1.dts b/arch/arm64/boot/dts/rockchip/overlay/orangepi-5-imx415-c1.dts
+new file mode 100644
+index 000000000..8fa5672c9
+--- /dev/null
++++ b/arch/arm64/boot/dts/rockchip/overlay/orangepi-5-imx415-c1.dts
+@@ -0,0 +1,96 @@
++/dts-v1/;
++/plugin/;
++
++/ {
++	fragment@0 {
++		target = <&csi2_dphy0_hw>;
++
++		__overlay__ {
++			status = "okay";
++		};
++	};
++
++	fragment@1 {
++		target = <&csi2_dphy0>;
++
++		__overlay__ {
++			status = "okay";
++		};
++	};
++
++	fragment@2 {
++		target = <&mipi2_csi2>;
++
++		__overlay__ {
++			status = "okay";
++		};
++	};
++
++	fragment@3 {
++		target = <&rkcif_mipi_lvds2>;
++
++		__overlay__ {
++			status = "okay";
++		};
++	};
++
++	fragment@4 {
++		target = <&rkcif_mipi_lvds2_sditf>;
++
++		__overlay__ {
++			status = "okay";
++		};
++	};
++
++	fragment@5 {
++		target = <&rkisp0_vir1>;
++
++		__overlay__ {
++			status = "okay";
++		};
++	};
++
++	fragment@6 {
++		target = <&i2c7>;
++
++		__overlay__ {
++			status = "okay";
++
++			imx415-1@1a {
++				status = "okay";
++			};
++		};
++	};
++
++	fragment@7 {
++		target = <&rkcif>;
++
++		__overlay__ {
++			status = "okay";
++		};
++	};
++
++	fragment@8 {
++		target = <&rkcif_mmu>;
++
++		__overlay__ {
++			status = "okay";
++		};
++	};
++
++	fragment@9 {
++		target = <&rkisp0>;
++
++		__overlay__ {
++			status = "okay";
++		};
++	};
++
++	fragment@10 {
++		target = <&isp0_mmu>;
++
++		__overlay__ {
++			status = "okay";
++		};
++	};
++};
+diff --git a/arch/arm64/boot/dts/rockchip/overlay/orangepi-5-imx415-c2.dts b/arch/arm64/boot/dts/rockchip/overlay/orangepi-5-imx415-c2.dts
+new file mode 100644
+index 000000000..cebade633
+--- /dev/null
++++ b/arch/arm64/boot/dts/rockchip/overlay/orangepi-5-imx415-c2.dts
+@@ -0,0 +1,90 @@
++/dts-v1/;
++/plugin/;
++
++/ {
++	compatible = "rockchip,rk3588s-orangepi-5", "rockchip,rk3588";
++
++	fragment@0 {
++		target = <&csi2_dcphy0>;
++
++		__overlay__ {
++			status = "okay";
++		};
++	};
++
++	fragment@1 {
++		target = <&mipi0_csi2>;
++
++		__overlay__ {
++			status = "okay";
++		};
++	};
++
++	fragment@2 {
++		target = <&rkcif_mipi_lvds>;
++
++		__overlay__ {
++			status = "okay";
++		};
++	};
++
++	fragment@3 {
++		target = <&rkcif_mipi_lvds_sditf>;
++
++		__overlay__ {
++			status = "okay";
++		};
++	};
++
++	fragment@4 {
++		target = <&rkisp0_vir0>;
++
++		__overlay__ {
++			status = "okay";
++		};
++	};
++
++	fragment@6 {
++		target = <&i2c7>;
++
++		__overlay__ {
++			status = "okay";
++
++			imx415-2@1a {
++				status = "okay";
++			};
++		};
++	};
++
++	fragment@7 {
++		target = <&rkcif>;
++		
++		__overlay__ {
++		        status = "okay";
++		};
++	};
++
++	fragment@8 {
++		target = <&rkcif_mmu>;
++
++		__overlay__ {
++			status = "okay";
++		};
++	};
++
++	fragment@9 {
++		target = <&rkisp0>;
++
++		__overlay__ {
++			status = "okay";
++		};
++	};
++
++	fragment@10 {
++		target = <&isp0_mmu>;
++
++		__overlay__ {
++			status = "okay";
++		};
++	};
++};
+diff --git a/arch/arm64/boot/dts/rockchip/overlay/orangepi-5-imx415-c3.dts b/arch/arm64/boot/dts/rockchip/overlay/orangepi-5-imx415-c3.dts
+new file mode 100644
+index 000000000..7fec2753b
+--- /dev/null
++++ b/arch/arm64/boot/dts/rockchip/overlay/orangepi-5-imx415-c3.dts
+@@ -0,0 +1,90 @@
++/dts-v1/;
++/plugin/;
++
++/ {
++	compatible = "rockchip,rk3588s-orangepi-5", "rockchip,rk3588";
++
++	fragment@0 {
++		target = <&csi2_dcphy1>;
++
++		__overlay__ {
++			status = "okay";
++		};
++	};
++
++	fragment@1 {
++		target = <&mipi1_csi2>;
++
++		__overlay__ {
++			status = "okay";
++		};
++	};
++
++	fragment@2 {
++		target = <&rkcif_mipi_lvds1>;
++
++		__overlay__ {
++			status = "okay";
++		};
++	};
++
++	fragment@3 {
++		target = <&rkcif_mipi_lvds1_sditf>;
++
++		__overlay__ {
++			status = "okay";
++		};
++	};
++
++	fragment@4 {
++		target = <&rkisp1_vir0>;
++
++		__overlay__ {
++			status = "okay";
++		};
++	};
++
++	fragment@5 {
++		target = <&i2c2>;
++
++		__overlay__ {
++			status = "okay";
++
++			imx415@1a {
++				status = "okay";
++			};
++		};
++	};
++
++	fragment@6 {
++		target = <&rkcif>;
++
++		__overlay__ {
++			status = "okay";
++		};
++	};
++
++	fragment@7 {
++		target = <&rkcif_mmu>;
++
++		__overlay__ {
++			status = "okay";
++		};
++	};
++
++	fragment@8 {
++		target = <&rkisp1>;
++
++		__overlay__ {
++			status = "okay";
++		};
++	};
++
++	fragment@9 {
++		target = <&isp1_mmu>;
++
++		__overlay__ {
++			status = "okay";
++		};
++	};
++};
+diff --git a/arch/arm64/boot/dts/rockchip/rk3588s-orangepi-5-camera1.dtsi b/arch/arm64/boot/dts/rockchip/rk3588s-orangepi-5-camera1.dtsi
+index 151d93dfa..bd8627649 100644
+--- a/arch/arm64/boot/dts/rockchip/rk3588s-orangepi-5-camera1.dtsi
++++ b/arch/arm64/boot/dts/rockchip/rk3588s-orangepi-5-camera1.dtsi
+@@ -26,8 +26,8 @@ mipi_in_ucam0: endpoint@0 {
+ 
+ 			mipi_in_ucam1: endpoint@1 {
+ 				reg = <1>;
+-				remote-endpoint = <&ov13855_out2>;
+-				data-lanes = <1 2>;
++				remote-endpoint = <&imx415_out2>;
++				data-lanes = <1 2 3 4>;
+ 			};
+ 			
+ 			mipi_in_ucam2: endpoint@2 {
+@@ -107,25 +107,25 @@ dw9714_p1: dw9714-p1@c {
+ 		rockchip,camera-module-facing = "back";
+ 	};
+ 
+-	ov13855_1: ov13855-1@36 {
+-		compatible = "ovti,ov13855";
++	imx415_1: imx415-1@1a {
++		compatible = "sony,imx415";
+ 		status = "disabled";
+-		reg = <0x36>;
++		reg = <0x1a>;
+ 		clocks = <&cru CLK_MIPI_CAMARAOUT_M3>;
+ 		clock-names = "xvclk";
+ 		pinctrl-names = "default";
+ 		pinctrl-0 = <&mipim0_camera3_clk>;
+-		reset-gpios = <&gpio3 RK_PC4 GPIO_ACTIVE_HIGH>;
+-		pwdn-gpios = <&gpio3 RK_PC6 GPIO_ACTIVE_HIGH>;
++		reset-gpios = <&gpio3 RK_PC4 GPIO_ACTIVE_LOW>;
++		power-gpios = <&gpio3 RK_PC6 GPIO_ACTIVE_HIGH>;
+ 		rockchip,camera-module-index = <0>;
+ 		rockchip,camera-module-facing = "back";
+-		rockchip,camera-module-name = "CMK-OT2016-FV1";
+-		rockchip,camera-module-lens-name = "default";
+-		lens-focus = <&dw9714_p1>;
++		rockchip,camera-module-name = "CMK-OT2022-PX1";
++		rockchip,camera-module-lens-name = "IR0147-50IRC-8M-F20";
++		// lens-focus = <&dw9714_p1>;
+ 		port {
+-			ov13855_out2: endpoint {
++			imx415_out2: endpoint {
+ 				remote-endpoint = <&mipi_in_ucam1>;
+-				data-lanes = <1 2>;
++				data-lanes = <1 2 3 4>;
+ 			};
+ 		};
+ 	};
+diff --git a/arch/arm64/boot/dts/rockchip/rk3588s-orangepi-5-camera2.dtsi b/arch/arm64/boot/dts/rockchip/rk3588s-orangepi-5-camera2.dtsi
+index b64f6c89b..626d24850 100644
+--- a/arch/arm64/boot/dts/rockchip/rk3588s-orangepi-5-camera2.dtsi
++++ b/arch/arm64/boot/dts/rockchip/rk3588s-orangepi-5-camera2.dtsi
+@@ -23,8 +23,8 @@ mipi_in_cam0: endpoint@0 {
+ 
+ 			mipi_in_cam1: endpoint@1 {
+ 				reg = <1>;
+-				remote-endpoint = <&ov13855_out>;
+-				data-lanes = <1 2>;
++				remote-endpoint = <&imx415_out>;
++				data-lanes = <1 2 3 4>;
+ 			};
+ 			
+ 			mipi_in_cam2: endpoint@2 {
+@@ -108,27 +108,27 @@ dw9714_p2: dw9714-p2@c {
+ 		rockchip,camera-module-facing = "back";
+ 	};
+ 
+-	ov13855_2: ov13855-2@36 {
+-		compatible = "ovti,ov13855";
++	imx415_2: imx415-2@1a {
++		compatible = "sony,imx415";
+ 		status = "disabled";
+-		reg = <0x36>;
++		reg = <0x1a>;
+ 		clocks = <&cru CLK_MIPI_CAMARAOUT_M4>;
+ 		clock-names = "xvclk";
+ 		power-domains = <&power RK3588_PD_VI>;
+ 		pinctrl-names = "default";
+ 		pinctrl-0 = <&mipim0_camera4_clk>;
+ 		rockchip,grf = <&sys_grf>;
+-		reset-gpios = <&gpio1 RK_PB2 GPIO_ACTIVE_HIGH>;
+-		pwdn-gpios = <&gpio3 RK_PC1 GPIO_ACTIVE_HIGH>;
++		reset-gpios = <&gpio1 RK_PB2 GPIO_ACTIVE_LOW>;
++		power-gpios = <&gpio3 RK_PC1 GPIO_ACTIVE_HIGH>;
+ 		rockchip,camera-module-index = <0>;
+ 		rockchip,camera-module-facing = "back";
+-		rockchip,camera-module-name = "CMK-OT2016-FV1";
+-		rockchip,camera-module-lens-name = "default";
+-		lens-focus = <&dw9714_p2>;
++		rockchip,camera-module-name = "CMK-OT2022-PX1";
++		rockchip,camera-module-lens-name = "IR0147-50IRC-8M-F20";
++		// lens-focus = <&dw9714_p2>;
+ 		port {
+-			ov13855_out: endpoint {
++			imx415_out: endpoint {
+ 				remote-endpoint = <&mipi_in_cam1>;
+-				data-lanes = <1 2>;
++				data-lanes = <1 2 3 4>;
+ 			};
+ 		};
+ 	};
+diff --git a/arch/arm64/boot/dts/rockchip/rk3588s-orangepi-5-camera3.dtsi b/arch/arm64/boot/dts/rockchip/rk3588s-orangepi-5-camera3.dtsi
+index 04f65a485..5d11a7e07 100644
+--- a/arch/arm64/boot/dts/rockchip/rk3588s-orangepi-5-camera3.dtsi
++++ b/arch/arm64/boot/dts/rockchip/rk3588s-orangepi-5-camera3.dtsi
+@@ -24,8 +24,8 @@ mipi_in_dcphy0: endpoint@0 {
+ 
+ 			mipi_in_dcphy1: endpoint@1 {
+ 				reg = <1>;
+-				remote-endpoint = <&ov13855_out1>;
+-				data-lanes = <1 2>;
++				remote-endpoint = <&imx415_out1>;
++				data-lanes = <1 2 3 4>;
+ 			};
+ 			
+ 			mipi_in_dcphy2: endpoint@2 {
+@@ -106,26 +106,26 @@ dw9714: dw9714@c {
+ 		rockchip,camera-module-facing = "front";
+ 	};
+ 
+-	ov13855_3: ov13855@36 {
+-		compatible = "ovti,ov13855";
++	imx415_3: imx415@1a {
++		compatible = "sony,imx415";
+ 		status = "disabled";
+-		reg = <0x36>;
++		reg = <0x1a>;
+ 		clocks = <&cru CLK_MIPI_CAMARAOUT_M4>;
+ 		clock-names = "xvclk";
+ 		pinctrl-names = "default";
+ 		pinctrl-0 = <&mipim0_camera4_clk>;
+ 		rockchip,grf = <&sys_grf>;
+ 		reset-gpios = <&gpio1 RK_PA6 GPIO_ACTIVE_HIGH>;
+-		pwdn-gpios = <&gpio3 RK_PC5 GPIO_ACTIVE_HIGH>;
++		power-gpios = <&gpio3 RK_PC5 GPIO_ACTIVE_HIGH>;
+ 		rockchip,camera-module-index = <1>;
+ 		rockchip,camera-module-facing = "front";
+-		rockchip,camera-module-name = "CMK-OT2016-FV1";
+-		rockchip,camera-module-lens-name = "default";
+-		lens-focus = <&dw9714>;
++		rockchip,camera-module-name = "CMK-OT2022-PX1";
++		rockchip,camera-module-lens-name = "IR0147-50IRC-8M-F20";
++		// lens-focus = <&dw9714>;
+ 		port {
+-			ov13855_out1: endpoint {
++			imx415_out1: endpoint {
+ 				remote-endpoint = <&mipi_in_dcphy1>;
+-				data-lanes = <1 2>;
++				data-lanes = <1 2 3 4>;
+ 			};
+ 		};
+ 	};
+@@ -209,7 +209,7 @@ imx708_3: imx708@1a {
+ 		pinctrl-names = "default";
+ 		pinctrl-0 = <&mipim0_camera4_clk>;
+ 		rockchip,grf = <&sys_grf>;
+-		reset-gpios = <&gpio1 RK_PA6 GPIO_ACTIVE_HIGH>;
++		reset-gpios = <&gpio1 RK_PA6 GPIO_ACTIVE_LOW>;
+ 		pwdn-gpios = <&gpio3 RK_PC5 GPIO_ACTIVE_HIGH>;
+ 		rockchip,camera-module-index = <1>;
+ 		rockchip,camera-module-facing = "front";
